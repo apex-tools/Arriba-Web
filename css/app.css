@@ -33,7 +33,6 @@ h3 {
 .web-firstscreen {
 	height: 100vh;
 	background-color: crimson;
-	background-image: url(../img/bg1.jpg);
 	background-position: center;
 	background-size: cover;
 	color: white;
