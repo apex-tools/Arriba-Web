@@ -1,0 +1,549 @@
+@import "https://rawgit.com/radiogrion/adds-lib/master/lib.less";
+//@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,400italic,300,300italic,500,500italic,700,700italic&subset=latin,cyrillic);
+//@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&subset=latin,cyrillic);
+
+//colors
+
+//colors
+
+//fonts
+h1
+{
+	
+}
+h2
+{
+//	font-size:50px;
+}
+p
+{
+	line-height:1.8;
+}
+a
+{
+	text-decoration:none!important;
+}
+label
+{
+	font-weight:300;
+}
+//fonts
+
+//header
+header
+{
+	.flex-parent();
+	.flex-direction(row);
+	.flex-align(center);
+	.flex-justify-content(space-between);
+	.flex-wrap(nowrap);
+	padding:3rem 3rem;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:100;
+	width:100%;
+	@media screen and(max-width:500px)
+	{
+		padding:15px;
+	}
+	.left-group
+	{
+		.logo
+		{
+			display:inline-block;
+			height:36px;
+			width:160px;
+			@media screen and(max-width:500px)
+			{
+				height:20px;
+				width:88px;
+			}
+			svg
+			{
+				pointer-events:none;
+				display:block;
+				height:inherit;
+				width:inherit;
+			}
+		}
+		.menu-trigger
+		{
+			display:none!important;
+			height:36px;
+			width:0px;
+			display:inline-block;
+			overflow:hidden;
+			transition:all 0.3s;
+			cursor:pointer;
+			@media screen and(max-width:500px)
+			{
+				height:20px;
+				width:20px;
+			}
+			&.active
+			{
+				width:36px;
+				margin-right:1rem;
+				@media screen and(max-width:500px)
+				{
+					width:20px;
+				}
+			}
+			svg
+			{
+				pointer-events:none;
+				display:block;
+				height:inherit;
+				width:inherit;
+			}
+		}
+	}
+	.cta
+	{
+		position:relative;
+		.dlink
+		{
+			color:white!important;
+			background-color:black;
+			padding:5px 15px;
+			@media screen and(max-width:768px)
+			{
+				margin-right:10px;
+				border:none;
+			}
+			&:nth-child(1)
+			{
+				@media screen and(max-width:330px)
+				{
+					display:none;
+				}
+			}
+		}
+	}
+	.call-form
+	{
+		position:absolute;
+		right:0px;
+		padding:15px 10px;
+		border:3px solid black;
+		width:300px;
+		background-color:white;
+		border-radius:4px;
+		display:none;
+		top:40px;
+		@media screen and(max-width:500px)
+		{
+			width:300px;
+		}
+	}
+}
+//header
+
+//nav
+aside
+{
+	position:fixed;
+	left:-300px;
+	top:0;
+	z-index:99;
+	width:300px;
+	background-image:url(../img/bgs/adise-hover.png);
+	background-position:center bottom;
+	background-size:cover;
+	padding:12rem 1rem 15rem 3rem;
+	transition:all 0.5s ease-in-out;
+	@media screen and(max-width:500px)
+	{
+		padding:7rem 15px 15rem 15px;
+		width:100%;
+		left:-100%;
+		
+	}
+	@media screen and(max-height:500px)
+	{
+		overflow-y:scroll;
+		height:100%;
+		background-color:black;
+		padding-bottom:15px;
+	}
+	menu
+	{
+		padding:0;
+		li
+		{
+			list-style-type:none;
+			display:block;
+			margin:10px 0;
+			a
+			{
+				display:inline-block;
+				padding:5px;
+				color:white!important;
+				font-size:20px;
+			}
+		}
+	}
+	&.active
+	{
+		left:0;
+	}
+}
+//nav
+
+//main
+main
+{
+	////slider
+	.slider
+	{
+		width:100%;
+		position:relative;
+		&.full
+		{
+			min-height:100vh;
+		}
+		&.half
+		{
+			height:50vh;
+			min-height:400px;
+		}
+		.tabs
+		{
+			position:absolute;
+			top:50%;
+			transform:translateY(-50%);
+			-webkit-transform:translateY(-50%);
+			right:3rem;
+			list-style-type:none;
+			li
+			{
+				display:block;
+				height:15px;
+				width:15px;
+				border-radius:50%;
+				border:1px solid black;
+				margin:5px 0;
+				cursor:pointer;
+				&.active
+				{
+					background-color:black;
+				}
+			}
+		}
+		.item
+		{
+			width:100%;
+			min-height:100vh;
+			background-size:cover;
+			background-position:center center;
+			background-color: crimson;
+			color: white;
+			padding:60px 15px 15px 15px;
+			.flex-parent();
+			.flex-direction(column);
+			.flex-align(center);
+			.flex-justify-content(center);
+			text-align:center;
+			overflow:hidden;
+			&.right
+			{
+				transform:translateY(100%);
+				-webkit-transform:translateY(100%);
+			}
+			&.left
+			{
+				transform:translateY(-100%);
+				-webkit-transform:translateY(-100%);
+			}
+		}
+	}
+	////slider
+	
+	////pageblock
+	.page-block
+	{
+		padding:5rem 0 5rem 0;
+		&.bg-light
+		{
+			background:#f7f7f5;
+		}
+	}
+	////pageblock
+	
+	////faces
+	.faces
+	{
+		position:relative;
+		overflow:hidden;
+		.list
+		{
+			position:relative;
+			left:0;
+			top:0;
+			.face
+			{
+				cursor:pointer;
+				padding:15px 0;
+				transition:all 0.4s;
+				text-align:center;
+				&:hover
+				{
+					background:black;
+					color:white;
+				}
+				img
+				{
+					width:100px;
+					height:100px;
+				}
+			}
+		}
+		.item
+		{
+			position:absolute;
+			left:0;
+			top:0;
+			width:100%;
+			height:100%;
+			background:#f7f7f5;
+			transition:left 0.5s;
+			.item-inner
+			{
+				position:realative;
+				.close
+				{
+					position:absolute;
+					top:0;
+					right:0;
+					height:30px;
+					width:30px;
+					background-image:url(../img/icons/cross.png);
+					background-size:contain;
+					opacity:1;
+				}
+			}
+		}
+		//positions
+		.left
+		{
+			left:-100%;
+		}
+		.right
+		{
+			left:100%;
+		}
+		.current
+		{
+			left:0;
+		}
+		//positions
+		//arrows
+		.arrow-left
+		{
+			position:absolute;
+			left:50px;
+			top:50%;
+			transform:translateY(-50%);
+			height:30px;
+			width:40px;
+			background-image:url(../img/icons/arrow-left.png);
+			background-size:contain;
+			cursor:pointer;
+			opacity:0;
+		}
+		.arrow-right
+		{
+			position:absolute;
+			right:50px;
+			top:50%;
+			transform:translateY(-50%);
+			height:30px;
+			width:40px;
+			background-image:url(../img/icons/arrow-right.png);
+			background-size:contain;
+			cursor:pointer;
+			opacity:0;
+		}
+		.visible
+		{
+			transition:opacity 0.2s;
+			opacity:1;
+		}
+		//arrows
+	}
+	////faces
+	
+	////partners
+	.partners
+	{
+		img
+		{
+			margin-bottom:15px;
+		}
+	}
+	////partners
+	
+	//ask-a-question
+	.ask-a-question
+	{
+		background:#4f4f4f;
+		color:white;
+	}
+	//ask-a-question
+
+	//works-preview
+	.small-case-preview
+	{
+		.small-case-preview-over
+		{
+			opacity:0;
+			transition:all 0.4s;
+			@media screen and(max-width:768px)
+			{
+				opacity:1;
+			}
+		}
+		&:hover
+		{
+			.small-case-preview-over
+			{
+				opacity:1;
+				transition:all 0.4s;
+			}
+		}
+	}
+	//works-preview
+	.process-offside
+	{
+		backfround-size:cover;
+		background-position:center center;
+	}
+}
+//main
+
+//footer
+footer
+{
+	padding:1rem 3rem;
+	background-color:lightgray;
+	width:100%;
+	.flex-parent();
+	.flex-direction(row);
+	.flex-align(center);
+	.flex-justify-content(space-between);
+	.flex-wrap(wrap);
+	&.fixed
+	{
+		position:fixed;
+		bottom:0;
+		left:0;
+		z-index:98;
+	}
+	small.soc-stroke
+	{
+		line-height:36px;
+		display:inline-block;
+		margin-right:10px;
+		float:left;
+	}
+	.spacer
+	{
+		.flex-grow(10);
+	}
+}
+//footer
+
+//main-adds
+////active elements
+.dlink
+{
+	color:black;
+	text-decoration:none!important;
+	display:inline-block;
+	padding-bottom:0px;
+	border-bottom:1px dashed black;
+	cursor:pointer;
+}
+.dload
+{
+	color:black!important;
+	text-decoration:none!important;
+	display:inline-block;
+	padding-bottom:0px;
+	border:1px dashed black;
+	cursor:pointer;
+	padding:5px 19px 5px 19px;
+	border-radius:15px;
+	position:relative;
+	&.pdf
+	{
+		&:after
+		{
+			background-image:url(../img/icons/file-types/pdf-mini.png);
+		}
+	}
+	&:after
+	{
+		content:'';
+		display:block;
+		height:15px;
+		width:15px;
+		background-image:url(../img/icons/file-types/pdf-mini.png);
+		background-size:contain;
+		float:right;
+		margin:3px 3px 3px 10px;
+	}
+}
+.main-btn
+{
+	color:white!important;
+	text-decoration:none!important;
+	background:black;
+	display:inline-block;
+	padding:5px 19px;
+	border-radius:15px;
+	border:1px solid white;
+}
+////active elements
+
+////social
+.soc
+{
+	display:inline-block;
+	height:30px;
+	width:30px;
+	margin-top:3px;
+	margin-right:10px;
+	border-radius:30px;
+	background-color:cornflowerblue;
+	background-position:center center;
+	background-size:contain;
+	&.vk
+	{
+		background-image:url(../img/icons/vk-social.png);
+	}
+}
+////social
+//main-adds
+
+
+//img
+.img-responsive
+{
+	display:inline-block;
+}
+//img
+.modal.fade .modal-dialog
+{
+	-webkit-transform: translate(0, 300px);
+	-ms-transform: translate(0, 300px);
+	-o-transform: translate(0, 300px);
+	transform: translate(0, 300px);
+}
+.modal.in .modal-dialog {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	transform: translate(0, 0);
+}
