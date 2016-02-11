@@ -17,24 +17,48 @@ $(document).ready(function(){
     preload();
     main_logo = Snap("#main_logo");
     main_trigger = Snap("#main_trigger");
-
+    $(".request #phone").mask("+7 (999) 999-9999");
     //validation
-    $("#request").validate({
+    $(".request").validate({
         rules: {
             user: {
-                required: true
+                required: true,
+                minlength: 2
             },
             phone: {
-                required: true
+                required: true,
+                minlength: 12
             }
         },
         messages: {
             user: {
-                required: "Это поле обязательно для заполнения"
+                required: "<small style='color:red'>Поле должно быть заполнено.</small>"
             },
             phone: {
-                required: "Это поле обязательно для заполнения",
-                number: True
+                required: "<small style='color:red'>Поле должно быть заполнено.</small>",
+                minlength: "<small style='color:red'>Поле должно содержать номер телефона.</small>"
+            }
+        }
+    });
+
+    $(".request-2").validate({
+        rules: {
+            user_2: {
+                required: true,
+                minlength: 2
+            },
+            phone_2: {
+                required: true,
+                minlength: 12
+            }
+        },
+        messages: {
+            user_2: {
+                required: "<small style='color:red'>Поле должно быть заполнено.</small>"
+            },
+            phone_2: {
+                required: "<small style='color:red'>Поле должно быть заполнено.</small>",
+                minlength: "<small style='color:red'>Поле должно содержать номер телефона.</small>"
             }
         }
     });

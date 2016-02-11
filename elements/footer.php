@@ -20,6 +20,7 @@
 <script src="js/app.js"></script>
 <script src="js/script.js"></script>
 <script src="js/snap-svg/snap.svg-min.js"></script>
+<script src="js/mask.js"></script>
 <script src="js/dist/jquery.validate.js"></script>
 <script src="http://jqueryvalidation.org/files/dist/jquery.validate.min.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>

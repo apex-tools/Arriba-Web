@@ -31,7 +31,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h4 class="modal-title" id="myModalLabel">Отправьте свои данные</h4>
             </div>
-            <form method="post"  id="request" action="mail.php">
+            <form method="post"  class="request" action="mail.php">
             <div class="modal-body">
                 <input type="hidden" name="title" id="title" value="Заказ со страницы веб-разработка"/>
                 <span class="clearfix">Ваше имя</span>

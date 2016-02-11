@@ -39,20 +39,23 @@
         <a class="dlink" onclick="$('.call-form').slideToggle(100)">(812) 385-56-23</a>
         <!--<a href="#" class="main-btn"><span class="hidden-xs">Сделать заказ</span><span class="visible-xs">Заказать</span></a>-->
         <div class="call-form">
-            <label class="max">
-                <small>Имя</small>
-                <input type="text" class="max" placeholder="Как к Вам обращаться?"/>
-            </label>
-            <label class="max">
-                <small>Телефон</small>
-                <input type="text" class="max" placeholder="Укажите Ваш номер для связи"/>
-            </label>
-            <div class="text-center">
-                <small><small>Мы не предоставляем информацию третьим лицам</small></small>
-            </div>
-            <div class="text-center">
-                <a href="#" class="btn btn-success">Позвоните мне</a>
-            </div>
+            <form method="post"  class="request-2" action="mail.php">
+                <input type="hidden" id="title" value="Перезвонилка"/>
+                <label class="max">
+                    <small>Имя</small>
+                    <input type="text" class="max" id="user_2" name="user_2" placeholder="Как к Вам обращаться?"/>
+                </label>
+                <label class="max">
+                    <small>Телефон</small>
+                    <input type="text" class="max" id="phone_2" name="phone_2"  placeholder="Укажите Ваш номер для связи"/>
+                </label>
+                <div class="text-center">
+                    <small><small>Мы не предоставляем информацию третьим лицам</small></small>
+                </div>
+                <div class="text-center">
+                    <button class="btn btn-success">Позвоните мне</button>
+                </div>
+            </form>
         </div>
     </div>
 </header>
